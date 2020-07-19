@@ -1,6 +1,6 @@
 console.log("Welcome to the main module")
 
-import { createPlan } from "./scripts/plan.js";
+import { createPlan } from "./plan.js";
 
 createPlan()
 
