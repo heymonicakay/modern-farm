@@ -1,8 +1,7 @@
 // In this module, define and export a plantSeeds function
 import { createPlan } from "./plan.js";
-// declarying variable for create plan
 
-const plantingPlan = createPlan();
+// const plantingPlan = createPlan();
 
 import { createAsparagus } from "./seeds/asparagus.js";
 import { createCorn } from "./seeds/corn.js";
@@ -25,10 +24,10 @@ const wheatSeed = createWheat();
 import { addPlants } from './field.js';
 
  // Figure out how to iterate both the parent array and the child arrays.
-export const plantSeeds = (plantingPlan) => {
+export const plantSeeds = (plan) => {
 // use .forEach -- "for each object within the ____ (before the .)" => what should happen.
 
-      plantingPlan.forEach((row) => {
+      plan.forEach((row) => {
             row.forEach((food) => {
                   // use if/else if to determine which types of seeds will be 'added' to the array. If the food listed is equal to the string "Asparagus", then we will invoke the create asparagus function by using the variable asparagusSeed. then we will pass in that seed as the argument for our function addPlants (import above), which adds the plant object to the empty field array.
                   if (food === "Asparagus") {
@@ -49,6 +48,8 @@ export const plantSeeds = (plantingPlan) => {
                   else if (food === "Wheat") {
                         addPlants(wheatSeed)
                   }
-            }
-      }
+            })
+      })
 }
+
+// current output is one long array. the yearlyPlan generates three arrays (rows). total number of objects and order of objects matches, but unsure how to match the nested array thing that yearlyPlan has goin on...

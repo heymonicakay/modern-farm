@@ -4,7 +4,7 @@ let field = []
 
 // In the module, define and export a function named addPlant.
 
-export const addPlant = (seedObject) => {
+export const addPlants = (seedObject) => {
       if (Array.isArray(seedObject) === true) {
            for (const eachSeed of seedObject) {
                  field.push(eachSeed);
