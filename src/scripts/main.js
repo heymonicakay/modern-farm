@@ -4,6 +4,7 @@ import { createPlan } from "./plan.js";
 import { plantSeeds } from "./tractor.js";
 import { usePlants } from "./field.js";
 import { harvestPlants } from "./harvester.js"
+import { catalog } from "./catalog.js"
 
 const yearlyPlan = createPlan()
 // In the main.js module, invoke the function that plants all of the seeds, 
@@ -16,4 +17,5 @@ const allCrops = usePlants()
 console.log(allCrops)
 
 const cropYeild = harvestPlants(allCrops)
-console.log(cropYeild)
+
+const foodForSale = catalog(cropYeild)
