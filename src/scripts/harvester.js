@@ -4,16 +4,26 @@
 export const harvestPlants = ( plantsArray ) => {
       // The function will return an array of seed objects.
       // - need empty array and return statement. 
+      let seedArray = []
       // Iterate the array of growing plants. 
-      plantsArray.forEach( plantObject => {
-
-            let seedArray = []
+      plantsArray.forEach((seedObject) => {
             // On each plant, get the value of the output property.
-            if (plantObject.type === "Corn") {
-                 seedArray.push(plantObject * (plantObject.output/2))
+            if (seedObject.type === "Corn") {
+                 const fuckingCorn = seedObject.output/2
+                 // iterate over cornObject half the number of times as the output value
+                 for (let i = 0; i < fuckingCorn; i++) {
+                       // then push the seedObject into the seedArray
+                       seedArray.push(seedObject)
+                 }
             }
+            // but if it's NOT corn, then we wanna iterate over the object the number of times as the output value.
             else {
-                  seedArray.push(plantObject * plantObject.output)
+                  const crop = seedObject.output
+
+                  for ( let i = 0; i < crop; i++) {
+                        //then push the seedObject into the seedArray
+                        seedArray.push(seedObject)
+                  }
             }
       })
       return seedArray
