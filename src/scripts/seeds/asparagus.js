@@ -1,14 +1,13 @@
 // define and export a function for creating a seed. 
 
-export const createAsparugus = (thisCrop) => {
-      // return an object with the following properties:
-      // type
-      // height
-      // output
-      return `
-            <section class="plant--card">
-            <div class="plant__type">${thisCrop.type}</div>
-            <div class="plant__height">${thisCrop.height}</div>
-            <div class="plant__output">${thisCrop.output}</div>
-            `
+const asparagus = [
+      {
+      type: "Asparagus",
+      height: 24,
+      output: 4,
+      }
+]
+
+export const createAsparagus = () => {
+      return asparagus.slice()
 }

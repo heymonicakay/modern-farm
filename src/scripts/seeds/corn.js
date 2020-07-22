@@ -1,8 +1,18 @@
 // The one exception is corn.
 
-export const createCorn =(thisCorn) => {
-      // return an array with two identical objects in it. Each with the proper keys and values.
-      let digitalCorn = [];
-
+const corn = [
+      {
+            type: "Corn",
+            height: 180,
+            output: 6,
+      },
+      {
+            type: "Corn",
+            height: 180,
+            output: 6,
+      },
+];
       
+export const createCorn = () => {
+      return corn.slice()
 }
