@@ -18,7 +18,7 @@ const cornSeed = createCorn();
 const potatoSeed = createPotato();
 const soybeanSeed = createSoybean();
 const sunflowerSeed = createSunflower();
-const wheatSeed = creatWheat();
+const wheatSeed = createWheat();
 
 // need to "add plants" to the field array
 
@@ -51,6 +51,4 @@ export const plantSeeds = (plantingPlan) => {
                   }
             }
       }
-     
-      
 }
