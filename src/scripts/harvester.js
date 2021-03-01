@@ -1,34 +1,33 @@
-// n this module, define and export a harvestPlants function.
+// In this module, define and export a harvestPlants function. [x]
 
-// The harvestPlants function must accept the plants array as input.
-export const harvestPlants = ( plantsArray ) => {
-      // The function will return an array of seed objects.
-      // - need empty array and return statement. 
-      let seedArray = []
-      // Iterate the array of growing plants. 
-      plantsArray.forEach((seedObject) => {
-            // On each plant, get the value of the output property.
-            if (seedObject.type === "Corn") {
-                 const fuckingCorn = seedObject.output/2
-                 // iterate over cornObject half the number of times as the output value
-                 for (let i = 0; i < fuckingCorn; i++) {
-                       // then push the seedObject into the seedArray
-                       seedArray.push(seedObject)
-                 }
-            }
-            // but if it's NOT corn, then we wanna iterate over the object the number of times as the output value.
-            else {
-                  const crop = seedObject.output
+// The harvestPlants function must accept the plants array as input. [x]
+export const harvestPlants = (plantsArray) => {
+  // The function will return an array of seed objects. [x] line 29
+  let arrayOfSeedObjects = []; // - need empty array and return statement. [x] [x]
 
-                  for ( let i = 0; i < crop; i++) {
-                        //then push the seedObject into the seedArray
-                        seedArray.push(seedObject)
-                  }
-            }
-      })
-      return seedArray
-}
+  // Iterate the array of plants. [x]
+  plantsArray.forEach((plant) => {
+    // On each plant, get the value of the output property. [x]
+    let plantOutput = plant.output;
 
-// Add that many of the plant objects to the array that the function returns. For example, if the current plant is a peanut object with an output of 2...
-
-// Again, the exception is corn. Half of your corn will be sold to cattle ranchers, so only half of the output of each corn plant will be added to the array that this function returns.
+    // If it's corn... FUCK corn.
+    if (plant.type === "Corn") {
+      // iterate over corn half the number of times as the output value [x]
+      let fuckingCorn = plantOutput / 2;
+      // then loop [x]
+      for (let i = 0; i < fuckingCorn; i++) {
+        // then PUSH the plant into the seedArray [x]
+        arrayOfSeedObjects.push(plant);
+      }
+    }
+    // but if it's NOT corn...
+    else {
+      // then loop
+      for (let i = 0; i < plantOutput; i++) {
+        //then push the plant into the seedArray [x]
+        arrayOfSeedObjects.push(plant);
+      }
+    }
+  });
+  return arrayOfSeedObjects;
+};
